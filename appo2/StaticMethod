@@ -1,0 +1,37 @@
+package com.durgasoft.test;
+
+
+class A{
+	
+	int i=10;
+	static int j=20;
+	static void m1() {
+		System.out.println("m1-A");
+//		System.out.println(i);  ---> Error
+		System.out.println(j);
+//		System.out.println(this.j);   ---> Error
+		
+	}
+	void m2() {
+		System.out.println("m2-A");
+		this.m1();
+		System.out.println(i);
+		System.out.println(j);
+	}
+}
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     A a =new A();
+        a.m1();
+        A.m1();
+	a.m2();
+//	A.m2();   --> Error
+	A a1=null;
+//	a1.m2(); --->Null pointer Exception
+	a1.m1();
+	}
+
+}
