@@ -1,0 +1,27 @@
+package com.durgasoft.test;
+
+
+class A{
+	int i=10;
+	static int j=20;
+	void m1() {
+//		static int k=30;  --> compilation Error
+		System.out.println(this.j);
+	}
+}
+
+public class Test {
+
+	public static void main(String[] args) {
+		A a = new A();
+		System.out.println(a.i);
+		System.out.println(a.j);
+		System.out.println(A.j);
+		
+		A a1=null;
+//		System.out.println(a1.i);  --> Nullpointer Exception 
+		System.out.println(a1.j);
+
+	}
+
+}
