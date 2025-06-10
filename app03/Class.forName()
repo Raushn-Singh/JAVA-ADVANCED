@@ -1,0 +1,42 @@
+
+package com.durgasoft.Test;
+
+//class A{
+//	int i=10;
+//	static int j=20;
+//	static {
+//		System.out.println("SB_A");
+////		System.out.println(i);  --->Error 
+//		System.out.println(j);
+////	    System.out.println(this.j); ---> Error
+//	}
+//}
+//
+
+class A{
+	static {
+		System.out.println("Classs Loading .....");
+		
+	}
+	
+	A(){
+		System.out.println("Object Creating ....");
+	}
+}
+
+
+
+
+
+public class Test {
+
+	public static void main(String[] args) throws Exception{
+		// TODO Auto-generated method stub
+         Class c=Class.forName("com.durgasoft.Test.A"); // fully Qulified name of the Class
+         Object obj=c.newInstance();
+
+         
+          
+	}
+
+}
