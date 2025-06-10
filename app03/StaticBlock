@@ -1,0 +1,22 @@
+package com.durgasoft.Test;
+
+class A{
+	int i=10;
+	static int j=20;
+	static {
+		System.out.println("SB_A");
+//		System.out.println(i);  --->Error 
+		System.out.println(j);
+//	    System.out.println(this.j); ---> Error
+	}
+}
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+          A a =new A();
+	}
+
+}
